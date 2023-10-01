@@ -9,7 +9,7 @@ import { AdminRoute } from './AdminRoute'
 
 const routes = createBrowserRouter([
   {
-    path: '/',
+    path: '/pucflix',
     element: <SignIn />,
   },
   {
