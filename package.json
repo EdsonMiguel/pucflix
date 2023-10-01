@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://edsonmiguel.github.io/pucflix",
   "scripts": {
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
