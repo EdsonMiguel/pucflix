@@ -13,11 +13,11 @@ const routes = createBrowserRouter([
     element: <SignIn />,
   },
   {
-    path: '/signup',
+    path: '/pucflix/signup',
     element: <SignUp />,
   },
   {
-    path: '/app',
+    path: '/pucflix/app',
     element: (
       <ProtectedRoute>
         <App />
@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     ),
   },
   {
-    path: '/admin',
+    path: '/pucflix/admin',
     element: (
       <AdminRoute>
         <AdminMovie />
@@ -33,7 +33,7 @@ const routes = createBrowserRouter([
     ),
   },
   {
-    path: '/admin/singup',
+    path: '/pucflix/admin/singup',
     element: (
       <AdminRoute>
         <AdminSignUp />

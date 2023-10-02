@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { Auth } from '../dtos/AuthDTO'
 import { userService } from '../services/UserService'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 export function SignIn() {
   const { register, handleSubmit } = useForm<Auth>()
@@ -11,9 +11,9 @@ export function SignIn() {
     try {
       const user = await userService.authenticate(userAuth)
       if (user?.roles === 'ADMIN') {
-        navigate('/admin')
+        navigate('/pucflix/admin')
       } else {
-        navigate('/app')
+        navigate('/pucflix/app')
       }
     } catch (error) {
       console.log(error)
@@ -42,6 +42,9 @@ export function SignIn() {
           <button className="py-4 px-2 rounded bg-red-500 text-white mt-8">
             Entrar
           </button>
+          <Link to="/pucflix/signup" className="text-white">
+            Cadastrar-se
+          </Link>
         </form>
       </div>
     </div>
